@@ -1,0 +1,125 @@
+/*
+	Color:
+	- A—F where A is the darkest, and F is the brightest
+	- 0—9 where 0 is the darkest, and 9 is the brightest
+	- F is brighter than 9
+	- 0 is darker than A
+	
+	Positioning:
+	- em
+	- ch
+	- px
+	- rem
+	- [integer/decimals]
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.6;
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 3rem 1.5rem;
+}
+
+content {
+	display: block;
+}
+
+section h2::after {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 2px;
+	background: #3a3a3a;
+	margin-top: 0.4rem;
+}
+
+p {
+	max-width: 65ch;
+}
+
+header,
+section,
+footer {
+	max-width: 900px;
+	margin: 0 auto 3rem auto;
+}
+
+article,
+header {
+	background-color: #161616;
+	border: 1px solid #262626;
+	padding: 1.5rem 2rem;
+	margin-top: 1rem;
+}
+
+section {
+	border-left: 2px solid #2a2a2a;
+	padding-left: 2rem;
+}
+
+header {
+	text-align: center;
+}
+
+header h1, 
+header h2 {
+	font-weight: 700;
+}
+
+header h1 {
+	color: #EEEEEE;
+	font-size: 2.4rem;
+	letter-spacing: -0.02em;
+}
+
+header h2 {
+	color: #CCCCCC;
+	font-size: 1.8rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.1rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0.3rem;
+}
+
+h1, 
+h2, 
+h3 {
+	color: #AAAAAA;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+	color: #00FFFF;
+	transition: 0.2s ease color;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #00CCCC;
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 2rem 1rem;
+	}
+	
+	section {
+		padding-left: 1rem;
+	}
+}
